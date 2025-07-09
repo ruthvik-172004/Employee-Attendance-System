@@ -1,0 +1,120 @@
+/* Blue and Yellow Theme for Navbar */
+:root {
+  --primary-blue: #0369a1;
+  --primary-blue-light: #0ea5e9;
+  --primary-blue-dark: #075985;
+  --primary-yellow: #eab308;
+  --primary-yellow-light: #facc15;
+  --primary-yellow-dark: #ca8a04;
+  --light-bg: #f8fafc;
+  --secondary-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --gradient-blue: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+  --gradient-yellow: linear-gradient(135deg, #eab308 0%, #facc15 100%);
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.navbar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-menu li a:hover {
+  background-color: var(--secondary-bg);
+  color: var(--text-dark);
+}
+
+.navbar-menu li.active a {
+  background-color: rgba(3, 105, 161, 0.1);
+  color: var(--primary-blue);
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.profile-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .navbar-menu li a span {
+    display: none;
+  }
+
+  .navbar-menu li a {
+    padding: 8px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+}
+
